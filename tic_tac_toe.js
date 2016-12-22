@@ -47,4 +47,15 @@ var tic_tac_toe = (function(tic_tac_toe)){
   Game.prototype.winner = function () {
     return winner(this.board)
   }
+
+  function drawboard(ctx){
+    ctx.beginPath()
+    ctx.moveTo(0.333, 0.05)
+    ctx.lineTo(0.333, 0.95)
+    ctx.moveTo(0.666, 0.05)
+    ctx.lineTo(0.666, 0.95)
+    ctx.moveTo(0.95, 0.333)
+    ctx.moveTo(0.95, 0.666)
+    ctx.stroke()
+  }
 }
