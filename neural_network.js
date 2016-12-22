@@ -44,5 +44,8 @@ var Neural = (function(Neural)){
       return layer;
     }
   }
+  //2D Matrix of weights connected to each node
+ Net.prototype.setWeights = function Net_setWeights(weights) {
 
+ }
 }
