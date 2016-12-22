@@ -26,5 +26,25 @@ var tic_tac_toe = (function(tic_tac_toe)){
     this.turn = turn;
     this.history = history;
   }
-  
+  Game.prototype.equals = function Game_equals(other) {
+    return (this.board === other.board && this.turn === other )
+  }
+  Game.prototype.getPiece = function Game_getPiece(square) {
+    return getPiece(this.board, square)
+
+  }
+  Game.prototype.move = function Game_move(square) {
+    this.history.push(this.board)
+    this.board = move(this.board, square, this.turn);
+    this.turn ^= 2
+  }
+
+  Game.prototype.undo = function Game_undo() {
+    this.board = this.history.pop()
+    this.turn ^=2
+
+  }
+  Game.prototype.winner = function () {
+    return winner(this.board)
+  }
 }
