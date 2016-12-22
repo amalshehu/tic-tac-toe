@@ -45,7 +45,12 @@ var Neural = (function(Neural)){
     }
   }
   //2D Matrix of weights connected to each node
- Net.prototype.setWeights = function Net_setWeights(weights) {
-
- }
+  Net.prototype.setWeights = function Net_setWeights(weights) {
+      this.eachNode(false, funtion(node, layerIndex, index)
+      node.weights = weights[layerIndex][index].map(function (w) {
+              return w;
+      })
+  }
+  Neural.Net Net;
+  return Neural;
 }
